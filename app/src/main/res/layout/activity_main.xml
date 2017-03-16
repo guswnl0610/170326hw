@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.guswn_000.homework2.MainActivity">
+
+    <Button
+        android:id="@+id/gotorelativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RelativeLayout예제" />
+
+    <Button
+        android:id="@+id/gotogradecalculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="학점 계산기" />
+
+    <Button
+        android:id="@+id/gotoreservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="레스토랑 예약" />
+
+</LinearLayout>
