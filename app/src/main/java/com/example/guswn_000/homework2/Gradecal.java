@@ -41,9 +41,11 @@ public class Gradecal extends AppCompatActivity
         else if(v.getId() == R.id.resetb)
         {
             image.setVisibility(View.GONE);
-            e1.setText("");
-            e2.setText("");
-            e3.setText("");
+            e1.setText(null);
+            e2.setText(null);
+            e3.setText(null);
+            total.setText("0점");
+            average.setText("0점");
             Toast.makeText(getApplicationContext(),"초기화되었습니다.",Toast.LENGTH_SHORT).show();
         }
 
@@ -51,12 +53,41 @@ public class Gradecal extends AppCompatActivity
 
     public void calculate()
     {
-        //image.setImageResource(R.drawable.a); 이미지를 a로 세팅
+
         String korscore = e1.getText().toString();
         String mathscore = e2.getText().toString();
         String engscore = e3.getText().toString();
-        int totalscore;
-        
+        int totalscore = Integer.parseInt(korscore) + Integer.parseInt(mathscore) + Integer.parseInt(engscore);
+        int averagescore = totalscore / 3;
+        total.setText(totalscore + "점");
+        average.setText(averagescore + "점");
+        if(averagescore >= 90)
+        {
+            image.setVisibility(View.VISIBLE);
+            image.setImageResource(R.drawable.a); // 이미지를 a 로 세팅
+        }
+        else if(averagescore >= 80)
+        {
+            image.setVisibility(View.VISIBLE);
+            image.setImageResource(R.drawable.b);
+        }
+        else if(averagescore >= 70)
+        {
+            image.setVisibility(View.VISIBLE);
+            image.setImageResource(R.drawable.c);
+        }
+        else if(averagescore >= 60)
+        {
+            image.setVisibility(View.VISIBLE);
+            image.setImageResource(R.drawable.d);
+        }
+        else
+        {
+            image.setVisibility(View.VISIBLE);
+            image.setImageResource(R.drawable.f);
+        }
+
+
     }
 
     public void emptytozero()
