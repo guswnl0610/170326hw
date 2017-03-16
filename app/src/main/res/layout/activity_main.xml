@@ -9,18 +9,21 @@
     tools:context="com.example.guswn_000.homework2.MainActivity">
 
     <Button
+        android:onClick="menutoother"
         android:id="@+id/gotorelativelayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="RelativeLayout예제" />
 
     <Button
+        android:onClick="menutoother"
         android:id="@+id/gotogradecalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="학점 계산기" />
 
     <Button
+        android:onClick="menutoother"
         android:id="@+id/gotoreservation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
