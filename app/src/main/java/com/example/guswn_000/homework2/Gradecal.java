@@ -57,7 +57,7 @@ public class Gradecal extends AppCompatActivity
         String korscore = e1.getText().toString();
         String mathscore = e2.getText().toString();
         String engscore = e3.getText().toString();
-        int totalscore = Integer.parseInt(korscore) + Integer.parseInt(mathscore) + Integer.parseInt(engscore);
+        double totalscore = Double.parseDouble(korscore) + Double.parseDouble(mathscore) + Double.parseDouble(engscore);
         double averagescore = totalscore / 3;
         total.setText(totalscore + "점");
         average.setText(averagescore + "점");
