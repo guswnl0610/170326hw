@@ -53,7 +53,6 @@ public class Gradecal extends AppCompatActivity
 
     public void calculate()
     {
-
         String korscore = e1.getText().toString();
         String mathscore = e2.getText().toString();
         String engscore = e3.getText().toString();
