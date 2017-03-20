@@ -127,15 +127,11 @@ public class Reservation extends AppCompatActivity {
     {
         public void handleMessage(Message msg){
             super.handleMessage(msg);
-
-            /** 초시간을 잰다 */
             int div = msg.what;
-
             int min = tt / 60;
             int sec = tt % 60;
             String strTime = String.format("%02d : %02d", min, sec);
-
-
+            
             this.sendEmptyMessageDelayed(0, 1000);
             timertv.setText(strTime);
             timertv.invalidate();
