@@ -74,28 +74,18 @@ public class Reservation extends AppCompatActivity {
                     timertv.setVisibility(View.VISIBLE);
                     prevbtn.setEnabled(false);
                     nextbtn.setEnabled(true);
-                    Calendar cal;
-                    cal = Calendar.getInstance();
-                    int year = cal.get(Calendar.YEAR);
-                    int month = cal.get(Calendar.MONTH);
-                    int day = cal.get(Calendar.DAY_OF_MONTH);
-                    int hour = cal.get(Calendar.HOUR_OF_DAY);
-                    int min = cal.get(Calendar.MINUTE);
-                    dp.updateDate(year,month,day);
-                    tp.setCurrentHour(hour);
-                    tp.setCurrentMinute(min);
                 }
                 else
                 {
                     tt = 0;
                     timertv.setVisibility(View.INVISIBLE);
                     page = 0;
+                    resetcalander();
                     date.setText("년 월 일");
                     time.setText("시 분");
                     adult.setText("명");
                     teen.setText("명");
                     child.setText("명");
-
                     e1.setText(null);
                     e2.setText(null);
                     e3.setText(null);
@@ -139,6 +129,20 @@ public class Reservation extends AppCompatActivity {
 
         }
     };
+
+    public void resetcalander()
+    {
+        Calendar cal;
+        cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        int hour = cal.get(Calendar.HOUR_OF_DAY);
+        int min = cal.get(Calendar.MINUTE);
+        dp.updateDate(year,month,day);
+        tp.setCurrentHour(hour);
+        tp.setCurrentMinute(min);
+    }
 
 
     public void mengbutton(View v)
