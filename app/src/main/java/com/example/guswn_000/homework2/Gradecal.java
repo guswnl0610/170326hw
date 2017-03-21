@@ -58,9 +58,9 @@ public class Gradecal extends AppCompatActivity
         String engscore = e3.getText().toString();
         double totalscore = Double.parseDouble(korscore) + Double.parseDouble(mathscore) + Double.parseDouble(engscore);
         double averagescore = totalscore / 3;
-        String averagescoretxt = String.format("%.2f");
+        String averagescoretxt = String.format("%.2f",averagescore);
         total.setText(totalscore + "점");
-        average.setText(averagescore + "점");
+        average.setText(averagescoretxt + "점");
         if(averagescore >= 90)
         {
             image.setVisibility(View.VISIBLE);
