@@ -131,7 +131,7 @@ public class Reservation extends AppCompatActivity {
             int min = tt / 60;
             int sec = tt % 60;
             String strTime = String.format("%02d : %02d", min, sec);
-            
+
             this.sendEmptyMessageDelayed(0, 1000);
             timertv.setText(strTime);
             timertv.invalidate();
